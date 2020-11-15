@@ -1,5 +1,6 @@
-function  getFile(file){
+function  getFile(){
+var file = "../ressources/divers/liste_francais.txt"
    fetch(file).then(function(response){
-       return response.text;
+       console.log(response.text)
    });
 }
