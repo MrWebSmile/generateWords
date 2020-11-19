@@ -7,8 +7,13 @@ function  getFile(){
    })
    .then(function(data){
        //console.log(data);
-       let tab = data.split('\n');
-       console.log(tab);
+       let words = data.split('\n');
+       let randT = getRandomNumber(words.length,6);
+       for(let i = 0; i <randT.length;i++){
+           let n = randT[i];
+           let word = words[n];
+           console.log(word);
+       }
    });
 }
 
