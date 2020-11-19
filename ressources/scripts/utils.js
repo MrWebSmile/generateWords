@@ -6,6 +6,8 @@ function  getFile(){
        return response.text();
    })
    .then(function(data){
-       console.log(data);
+       //console.log(data);
+       var tab = data.split('\n');
+       console.log(tab);
    });
 }
