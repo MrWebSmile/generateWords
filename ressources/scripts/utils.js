@@ -20,7 +20,7 @@ function  getFile(){
 function getRandomNumber(long,n){
     let rand = -1;
     let randTable =[];
-    for(var i = 0; i<n;i++){
+    for(let i = 0; i<n;i++){
        rand = Math.floor(Math.random()*(long-0)+0);
        randTable.push(rand);
     }
