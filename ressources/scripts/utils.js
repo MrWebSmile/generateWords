@@ -1,7 +1,7 @@
-function  getFile(){
+function  getWords(){
 
    const file = "https://mrwebsmile.github.io/generateWords/ressources/divers/liste_francais.txt";
-
+   
    fetch(file).then(function(response){
        return response.text();
    })
@@ -35,4 +35,9 @@ function getRandomNumber(long,n){
     wordP.innerText = value;
     wordsDiv.appendChild(wordP);
 
+}
+function deleteChild(){
+    let wordsDiv = document.getElementById("words");
+    let p = wordsDiv.querySelector('p')
+    wordsDiv.deleteChild(p);
 }
