@@ -36,8 +36,9 @@ function getRandomNumber(long,n){
     wordsDiv.appendChild(wordP);
 
 }
+
 function deleteChild(){
     let wordsDiv = document.getElementById("words");
     let p = wordsDiv.querySelector('p');
-    wordsDiv.deleteChild(p);
+    wordsDiv.removeChild(p);
 }
