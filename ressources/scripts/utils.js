@@ -1,7 +1,7 @@
 function  getWords(){
 
    const file = "https://mrwebsmile.github.io/generateWords/ressources/divers/liste_francais.txt";
-   
+   deleteChild();
    fetch(file).then(function(response){
        return response.text();
    })
