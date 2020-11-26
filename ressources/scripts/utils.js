@@ -12,7 +12,8 @@ function  getFile(){
        for(let i = 0; i <randT.length;i++){
            let n = randT[i];
            let word = words[n];
-           console.log(word);
+           display(word);
+           //console.log(word);
        }
    });
 }
@@ -25,4 +26,13 @@ function getRandomNumber(long,n){
        randTable.push(rand);
     }
     return randTable;
+}
+
+ function display(value){
+
+    let wordsDiv = document.getElementById("words");
+    let wordP = document.createElement('p');
+    wordP.innerText = value;
+    wordsDiv.appendChild(wordP);
+
 }
