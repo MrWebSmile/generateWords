@@ -39,10 +39,8 @@ function getRandomNumber(long,n){
 
 function deleteChild(){
     let wordsDiv = document.getElementById("words");
-    let child = wordsDiv.childNodes
-    if (child.length > 0){
-
-        let del = wordsDiv.removeChild(child[0]);
+    let childs = wordsDiv.childNodes
+    if (childs.length > 0){
 
     }
     
