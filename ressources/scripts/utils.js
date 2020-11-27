@@ -42,7 +42,7 @@ function deleteChild(){
     let child = wordsDiv.childNodes
     if (child){
 
-        wordsDiv.removeChild(child[0]);
+        let del = wordsDiv.removeChild(child[0]);
 
     }
     
