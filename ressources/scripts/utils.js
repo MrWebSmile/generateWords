@@ -40,7 +40,7 @@ function getRandomNumber(long,n){
 function deleteChild(){
     let wordsDiv = document.getElementById("words");
     let child = wordsDiv.childNodes
-    if (child > 0){
+    if (child.length > 0){
 
         let del = wordsDiv.removeChild(child[0]);
 
