@@ -45,10 +45,7 @@ function deleteChild(parentNode){
      
     /*let tag = optionTag.tag;
     let typeTag = optionTag.type;*/
-    let nodesChild = parentNode.childNodes;
-    console.log(`${nodesChild.length}`);
-
-
+   
     while( parentNode.firstChild) {
         // La liste n'est pas une copie, elle sera donc réindexée à chaque appel
         parentNode.removeChild( parentNode.firstChild);
