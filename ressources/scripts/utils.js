@@ -1,7 +1,9 @@
 function  getWords(){
 
    const file = "https://mrwebsmile.github.io/generateWords/ressources/divers/liste_francais.txt";
-   deleteChild();
+   let parentNode = document.getElementById('words');
+
+   deleteChild(parentNode,{tag:'p',type:''});
    fetch(file).then(function(response){
        return response.text();
    })
