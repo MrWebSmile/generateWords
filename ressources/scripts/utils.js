@@ -1,14 +1,15 @@
 function  getWords(){
 
    const file = "https://mrwebsmile.github.io/generateWords/ressources/divers/liste_francais.txt";
-   let parentNode = document.getElementById('words');
 
-   deleteChild(parentNode,{tag:'p',type:''});
+
    fetch(file).then(function(response){
        return response.text();
    })
    .then(function(data){
        //console.log(data);
+       let parentNode = document.getElementById('words');
+       deleteChild(parentNode);
        let words = data.split('\n');
        let randT = getRandomNumber(words.length,6);
        for(let i = 0; i <randT.length;i++){
@@ -39,30 +40,18 @@ function getRandomNumber(long,n){
 
 }
 
-function deleteChild(parentNode,optionTag){
+function deleteChild(parentNode){
    
      
-    let tag = optionTag.tag;
-    let typeTag = optionTag.type;
-    let nodeChild = "";
-    switch (typeTag) {
-        case "name":
-            document.getElementsByName(tag);
-            break;
-        case "id":
-            nodeChild = document.getElementById(tag);
-            break;
-        case "class":
-            nodeChild = document.getElementsByClassName(tag);
-            break;    
-        default:
-            nodeChild = document.getElementsByTagName(tag);
-            break;
-    }
+    /*let tag = optionTag.tag;
+    let typeTag = optionTag.type;*/
+    let nodesChild = parentNode.childNodes;
+    console.log(`${nodesChild.length}`);
 
-    for(let i = 0;i<nodeChild.length;i++){
-      
-        parentNode.removeChild(nodeChild[i]);
+
+    while( parentNode.firstChild) {
+        // La liste n'est pas une copie, elle sera donc réindexée à chaque appel
+        parentNode.removeChild( parentNode.firstChild);
     }
     
 }
