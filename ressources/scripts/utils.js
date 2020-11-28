@@ -37,11 +37,31 @@ function getRandomNumber(long,n){
 
 }
 
-function deleteChild(){
-    let wordsDiv = document.getElementById("words");
-    let childs = wordsDiv.childNodes
-    if (childs.length > 0){
+function deleteChild(parentNode,optionTag){
+   
+     
+    let tag = optionTag.tag;
+    let typeTag = optionTag.type;
+    let nodeChild = "";
+    switch (typeTag) {
+        case "name":
+            document.getElementsByName(tag);
+            break;
+        case "id":
+            nodeChild = document.getElementById(tag);
+            break;
+        case "class":
+            nodeChild = document.getElementsByClassName(tag);
+            break;    
+        default:
+            nodeChild = document.getElementsByTagName(tag);
+            break;
+    }
 
+    for(let i = 0;i<nodeChild.length;i++){
+      
+        parentNode.removeChild(nodeChild[i]);
     }
     
 }
+
